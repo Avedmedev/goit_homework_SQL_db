@@ -1,7 +1,7 @@
 import math
 from datetime import datetime, timedelta
 import faker
-from random import randint, choice
+from random import randint
 import sqlite3
 
 from create_db import create_db
@@ -29,10 +29,10 @@ def get_date_of() -> datetime:
 
 
 def insert_data_to_db() -> None:
-    # Создадим соединение с нашей БД и получим объект курсора для манипуляций с данными
 
     fake = faker.Faker('uk-UA')
 
+    # Создадим соединение с нашей БД и получим объект курсора для манипуляций с данными
     with sqlite3.connect('homework08.db') as con:
 
         cur = con.cursor()

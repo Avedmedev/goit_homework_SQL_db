@@ -13,7 +13,6 @@ FOREIGN KEY (student_id) REFERENCES students (id)
       ON UPDATE CASCADE
 );
 
-drop table if exists discipline;
 drop table if exists disciplines;
 create table disciplines (
 id integer primary key autoincrement,
